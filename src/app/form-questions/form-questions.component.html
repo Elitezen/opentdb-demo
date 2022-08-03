@@ -1,0 +1,40 @@
+<form>
+  <div>
+    <label for="category">Category</label><br />
+    <select 
+      name="category" 
+      id="category" 
+      (change)="watchCategory()">
+      <option *ngFor="let category of categories; index as i" [value]="i + 9">
+        {{category}}
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="difficulty">Difficulty</label><br />
+    <select 
+      name="difficulty" 
+      id="difficulty"
+      (change)="watchDifficulty()">
+      <option *ngFor="let difficulty of difficulties; index as i" [value]="difficulties[i].toLowerCase()">
+        {{difficulty}}
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="amount">Amount</label><br />
+    <input 
+      name="amount" 
+      id="amount" 
+      type="number" 
+      [defaultValue]="10" 
+      placeholder="10"
+      (change)="watchAmount()"/>
+  </div>
+
+  <button id="submit" (click)="submitForm()">
+    Start
+  </button>
+</form>

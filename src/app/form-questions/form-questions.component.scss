@@ -1,0 +1,33 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  div {
+    padding: 1em 0;
+  }
+
+  label {
+    padding-bottom: 50em;
+  }
+
+  select  {
+    width: 200px;
+    height: 2em;
+  }
+
+  input {
+    width: 190px;
+    height: 1.9em;
+  }
+
+  button {
+    width: 200px;
+    height: 40px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
